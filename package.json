@@ -11,9 +11,10 @@
   "bugs": {
     "url": "https://github.com/cotes2020/jekyll-theme-chirpy/issues"
   },
-  "homepage": "https://github.com/cotes2020/jekyll-theme-chirpy/",
+  "homepage": "https://larcenous.github.io/",
   "scripts": {
-    "prebuild": "npx rimraf assets/js/dist",
+    "prebuild": "npm run build",
+    "deploy" : "gh-pages -d build", 
     "build": "NODE_ENV=production npx rollup -c --bundleConfigAsCjs",
     "prewatch": "npx rimraf assets/js/dist",
     "watch": "npx rollup -c --bundleConfigAsCjs -w",
